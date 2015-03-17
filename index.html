@@ -3,15 +3,43 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
     <title>quickanalytics</title>
     <script src="quickie.js"></script>
+    <script>
+    function dothatthing() {
+      var snippet = getsnippet(document.getElementById('tracking').value);
+      document.getElementById('scriptything').innerHTML = snippet;
+    }
+    </script>
   </head>
-  <script>addsnippet("UA-56480602-3");</script>
   <body style="font-family: 'Roboto', sans-serif;">
     <div style="width: 100%">
       <b><h1>about <i>quickanalytics</i></h1></b>
       <h2>analytics in a jiffy</h2>
       <hr>
       <div style="font-size: 17px;">
+        <h1 id="quickanalytics">quickanalytics</h1>
+        <h2 id="google-analytics-in-a-jiffy">Google Analytics in a jiffy.</h2>
+        <p>"quickanalytics" is a super easy way to get an analytics tracking code into your website in a jiffy. Its also open-source and free.</p>
+        <p>If you need to get a tracking code or a code snippet, you can use the quickanalytics website or the <code>quickie.js</code> file.</p>
+        <h3 id="how-to-use-quickiejs">How to use <code>quickie.js</code></h3>
+        <p>Just download the .js file to your website and run this code after putting the script in your website:</p>
+        <pre><code>var tracking = getsnippet(&quot;trackingcodehere&quot;);
+        </code></pre>
         
+        <p>Yay! You are done!</p>
+        
+        <hr>
+        
+        <h2>Try it:</h2>
+        
+        <input type="text" id="tracking" placeholder="Google Analytics tracking code.">
+        <br>
+        <button onclick="dothatthing()">Convert</button>
+        <h3>Your converted text:</h3>
+        <pre>
+        <code id="scriptything">
+        
+        </code>
+        </pre>
       </div>
     </div>
   </body>
